@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M/s Mathuradas Meghji – Wholesale Edible Oil & Groceries, Okha</title>
+  <meta name="description" content="M/s Mathuradas Meghji – Wholesale Edible Oil and Retail Groceries. Main Bazar, Okha-361350, Gujarat. GSTIN: 24AAPPG2265C1Z1" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --maroon: #7B2B2B;
+      --maroon-dark: #5c1f1f;
+      --maroon-light: #a04040;
+      --cream: #fdf6ee;
+      --warm-white: #fffaf5;
+      --text: #1a1008;
+      --text-muted: #7a6050;
+      --border: rgba(123,43,43,0.15);
+      --gold: #c8943a;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--maroon-dark);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-cube {
+      width: 36px; height: 36px;
+      background: var(--maroon);
+      border-radius: 7px;
+      display: grid;
+      place-items: center;
+      border: 1.5px solid rgba(255,255,255,0.25);
+    }
+    .nav-cube-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1;
+    }
+    .nav-cube span { color: #fff; font-weight: 700; font-size: 10px; }
+    .nav-cube .row { display: flex; gap: 2px; }
+    .nav-name {
+      font-family: 'Playfair Display', serif;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+    }
+    nav ul a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+    }
+    nav ul a:hover { color: #fff; }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--maroon);
+      position: relative;
+      overflow: hidden;
+      padding: 80px 40px 72px;
+      text-align: center;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 320px; height: 320px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -40px;
+      width: 260px; height: 260px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.03);
+    }
+
+    .hero-logo {
+      width: 88px; height: 88px;
+      background: var(--maroon-dark);
+      border-radius: 18px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      margin: 0 auto 28px;
+      border: 2px solid rgba(255,255,255,0.2);
+      position: relative;
+      z-index: 1;
+    }
+    .hero-logo .top { font-size: 28px; font-weight: 700; color: #fff; line-height: 1; }
+    .hero-logo .bot { display: flex; gap: 4px; }
+    .hero-logo .bot span { font-size: 19px; font-weight: 700; color: #fff; }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      position: relative; z-index: 1;
+    }
+    .hero .tagline {
+      font-size: 15px;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 8px;
+      position: relative; z-index: 1;
+    }
+    .hero .location {
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+      position: relative; z-index: 1;
+    }
+
+    .gstin-strip {
+      background: var(--maroon-dark);
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 12px;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.5px;
+    }
+    .gstin-strip span { color: rgba(255,255,255,0.9); font-weight: 500; }
+
+    /* ── SECTIONS ── */
+    .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+    section { padding: 52px 0; border-bottom: 1px solid var(--border); }
+    section:last-of-type { border-bottom: none; }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--maroon);
+      margin-bottom: 6px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 28px;
+    }
+
+    /* ── PRODUCTS ── */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 14px;
+    }
+    .product-card {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 16px;
+      text-align: center;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .product-card:hover {
+      border-color: var(--maroon-light);
+      transform: translateY(-3px);
+    }
+    .product-icon {
+      font-size: 30px;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .product-name {
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--text);
+    }
+    .product-tag {
+      display: inline-block;
+      background: rgba(123,43,43,0.1);
+      color: var(--maroon);
+      font-size: 11px;
+      padding: 2px 10px;
+      border-radius: 20px;
+      margin-top: 6px;
+    }
+
+    /* ── CONTACT ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .contact-card {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 20px;
+    }
+    .contact-card.full { grid-column: 1 / -1; }
+    .contact-card label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .contact-card p {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+    }
+    .contact-card a {
+      color: var(--maroon);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .contact-card a:hover { text-decoration: underline; }
+
+    /* ── TEAM ── */
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .person-card {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .avatar {
+      width: 50px; height: 50px;
+      border-radius: 50%;
+      background: var(--maroon);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 500; color: #fff;
+      flex-shrink: 0;
+    }
+    .person-name {
+      font-weight: 500;
+      font-size: 15px;
+      color: var(--text);
+    }
+    .person-phone a {
+      color: var(--maroon);
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    /* ── BUSINESS INFO ── */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+    }
+    .info-card {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 20px;
+    }
+    .info-card label {
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 1px; text-transform: uppercase;
+      color: var(--text-muted); display: block; margin-bottom: 4px;
+    }
+    .info-card p {
+      font-size: 14px; font-weight: 500; color: var(--text);
+    }
+    .active-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: #e8f5e9; color: #2e7d32;
+      font-size: 12px; font-weight: 500;
+      padding: 3px 12px; border-radius: 20px;
+    }
+    .active-badge::before {
+      content: '';
+      width: 7px; height: 7px;
+      background: #43a047;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--maroon-dark);
+      padding: 32px 40px;
+      text-align: center;
+    }
+    footer p {
+      color: rgba(255,255,255,0.55);
+      font-size: 13px;
+    }
+    footer .footer-name {
+      font-family: 'Playfair Display', serif;
+      color: rgba(255,255,255,0.85);
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      nav ul { display: none; }
+      nav { padding: 14px 20px; }
+      .hero { padding: 56px 20px 52px; }
+      .hero h1 { font-size: 28px; }
+      .contact-grid, .team-grid { grid-template-columns: 1fr; }
+      .contact-card.full { grid-column: 1; }
+      .container { padding: 0 16px; }
+      section { padding: 36px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <div class="nav-cube">
+        <div class="nav-cube-inner">
+          <span>M</span>
+          <div class="row"><span>M</span><span>M</span></div>
+        </div>
+      </div>
+      <span class="nav-name">Mathuradas Meghji</span>
+    </div>
+    <ul>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#business">Business Info</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-logo">
+      <div class="top">M</div>
+      <div class="bot"><span>M</span><span>M</span></div>
+    </div>
+    <h1>M/s Mathuradas Meghji</h1>
+    <p class="tagline">Wholesale Edible Oil &amp; Retail Groceries</p>
+    <p class="location">Main Bazar, Okha – 361350, Gujarat, India</p>
+  </div>
+
+  <div class="gstin-strip">
+    GSTIN: <span>24AAPPG2265C1Z1</span> &nbsp;·&nbsp; Status: <span>Active</span> &nbsp;·&nbsp; Since <span>01 July 2017</span>
+  </div>
+
+  <!-- PRODUCTS -->
+  <section id="products">
+    <div class="container">
+      <p class="section-label">What we sell</p>
+      <h2 class="section-title">Our Products</h2>
+      <div class="products-grid">
+        <div class="product-card">
+          <span class="product-icon">🛢️</span>
+          <div class="product-name">Edible Oil</div>
+          <span class="product-tag">Wholesale</span>
+        </div>
+        <div class="product-card">
+          <span class="product-icon">🌾</span>
+          <div class="product-name">Wheat</div>
+          <span class="product-tag">Retail</span>
+        </div>
+        <div class="product-card">
+          <span class="product-icon">🌱</span>
+          <div class="product-name">Bajra</div>
+          <span class="product-tag">Retail</span>
+        </div>
+        <div class="product-card">
+          <span class="product-icon">🪥</span>
+          <div class="product-name">Toothpaste</div>
+          <span class="product-tag">FMCG</span>
+        </div>
+        <div class="product-card">
+          <span class="product-icon">🧺</span>
+          <div class="product-name">Groceries</div>
+          <span class="product-tag">Wide Range</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <p class="section-label">Reach us</p>
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-grid">
+        <div class="contact-card full">
+          <label>Address</label>
+          <p>Main Bazar, Okha – 361350, Gujarat, India</p>
+        </div>
+        <div class="contact-card">
+          <label>Telephone</label>
+          <a href="tel:02892262014">02892-262014</a>
+        </div>
+        <div class="contact-card">
+          <label>Mobile 1</label>
+          <a href="tel:8866260012">88662 60012</a>
+        </div>
+        <div class="contact-card">
+          <label>Mobile 2</label>
+          <a href="tel:9228885012">92288 85012</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team">
+    <div class="container">
+      <p class="section-label">People</p>
+      <h2 class="section-title">Our Team</h2>
+      <div class="team-grid">
+        <div class="person-card">
+          <div class="avatar">PG</div>
+          <div>
+            <div class="person-name">Pravinbhai Gokani</div>
+            <div class="person-phone"><a href="tel:9275115282">92751 15282</a></div>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="avatar">HG</div>
+          <div>
+            <div class="person-name">Hiteshbhai Gokani</div>
+            <div class="person-phone"><a href="tel:9376411101">93764 11101</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUSINESS INFO -->
+  <section id="business">
+    <div class="container">
+      <p class="section-label">Registration</p>
+      <h2 class="section-title">Business Details</h2>
+      <div class="info-grid">
+        <div class="info-card">
+          <label>Legal Name</label>
+          <p>Pravinchandra Narandas Gokani</p>
+        </div>
+        <div class="info-card">
+          <label>Trade Name</label>
+          <p>Mathuradas Meghji</p>
+        </div>
+        <div class="info-card">
+          <label>GSTIN</label>
+          <p>24AAPPG2265C1Z1</p>
+        </div>
+        <div class="info-card">
+          <label>Constitution</label>
+          <p>Proprietorship</p>
+        </div>
+        <div class="info-card">
+          <label>Taxpayer Type</label>
+          <p>Regular</p>
+        </div>
+        <div class="info-card">
+          <label>GST Status</label>
+          <p><span class="active-badge">Active</span></p>
+        </div>
+        <div class="info-card">
+          <label>Registered Since</label>
+          <p>01 July 2017</p>
+        </div>
+        <div class="info-card">
+          <label>State Jurisdiction</label>
+          <p>Gujarat – Division 11, Range 24</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-name">M/s Mathuradas Meghji</p>
+    <p>Main Bazar, Okha – 361350, Gujarat &nbsp;|&nbsp; GSTIN: 24AAPPG2265C1Z1</p>
+    <p style="margin-top: 10px;">Tel: 02892-262014 &nbsp;|&nbsp; Mob: 8866260012 &nbsp;|&nbsp; 9228885012</p>
+  </footer>
+
+</body>
+</html>
