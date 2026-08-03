@@ -1,4 +1,4 @@
-# M/s Mathuradas Meghji &mdash; website
+# Mathuradas Meghji &mdash; website
 
 Static site for M/s Mathuradas Meghji, Main Bazar, Okha (retail &amp; wholesale groceries, authorised dealer for RAVI, GEETA and JP edible oils).
 
